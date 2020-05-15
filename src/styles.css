@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+footer {
+    width: 100%;
+    position: fixed;
+    color: whitesmoke;
+    bottom: 0px;
+}
+
+
+/* body {
+    font-family: 'Balsamiq Sans', cursive;
+} */
