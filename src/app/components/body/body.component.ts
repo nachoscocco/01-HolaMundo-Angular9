@@ -8,4 +8,14 @@ import { Component } from '@angular/core'
 
 export class BodyComponent{
 
-} 
+
+    mostrar  = true;
+    frase: any ={
+        mensaje : 'Voy a ser Rey de los Piratas!',
+        autor: "Monkey D'Luffy"
+    };
+
+    yonkos: string[] = ['Big Mom', 'Shanks', 'Kurohige', 'Kaido'];
+
+    fnRotar=(mostrar) => !mostrar;
+}

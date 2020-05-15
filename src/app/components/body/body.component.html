@@ -3,14 +3,14 @@
     <div class="col">
         <h1>*ngif</h1>
         <hr>
-        <div class="card text-white bg-danger mb-3 font" style="width: 100%">
+        <div *ngIf="mostrar" class="card text-white bg-danger mb-3 font" style="width: 100%">
             <div class="card-body">
-                <h5 class="card-title">Primary card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                <h5 class="card-title">AUTOR {{frase.autor}}</h5>
+                <p class="card-text">Mensaje: {{frase.mensaje}}
                 </p>
             </div>
         </div>
-        <button class='btn btn-outline-dark btn-block '>Mostrar/Ocultar</button>
+        <button (click)='mostrar= fnRotar(mostrar)' class='btn btn-outline-dark btn-block '>Mostrar/Ocultar</button>
     </div>
 
 
@@ -18,12 +18,11 @@
     <div class="col">
         <h1>*ngfor</h1>
         <hr>
-        <ul class="list-group font">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+
+        <ul *ngIf='mostrar' class="list-group font">
+
+            <li *ngFor=' let yonko of yonkos' class="list-group-item">{{yonko}}</li>
+
         </ul>
     </div>
 
